@@ -1,0 +1,57 @@
+running  'python' 'squares.py' '2'
+4
+Bisecting: 250 revisions left to test after this (roughly 8 steps)
+[a6647f7d6050553082237b5dd38e2e04ce40d13c] Comment 750
+running  'python' 'squares.py' '2'
+4
+Bisecting: 125 revisions left to test after this (roughly 7 steps)
+[5aeebff877d79e887a4526883f2600a544a2049f] Comment 875
+running  'python' 'squares.py' '2'
+4
+Bisecting: 62 revisions left to test after this (roughly 6 steps)
+[699c664b340f331bede235a78ad8c920a5d917a3] Comment 937
+running  'python' 'squares.py' '2'
+Traceback (most recent call last):
+  File "squares.py", line 9, in <module>
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+Bisecting: 31 revisions left to test after this (roughly 5 steps)
+[2a80e3d4261b4cdeb6f11f4897c6c3b20a194410] Comment 906
+running  'python' 'squares.py' '2'
+4
+Bisecting: 15 revisions left to test after this (roughly 4 steps)
+[a58345793ac92186deb000eddda23d9c3a9ff316] Comment 922
+running  'python' 'squares.py' '2'
+4
+Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[c30980ec8c3404e7bd410d6a74223fe451124597] Comment 930
+running  'python' 'squares.py' '2'
+4
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[9e4f7ac25fa8935b556cbad8c8453a7234ec3c59] Comment 934
+running  'python' 'squares.py' '2'
+4
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[9712ba87830140191fb844659b1b6735ba8c160d] Comment 935
+running  'python' 'squares.py' '2'
+Traceback (most recent call last):
+  File "squares.py", line 9, in <module>
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[6f7f374133c5c969ba18f09c1304fadf1877713a] Breaking argument type
+running  'python' 'squares.py' '2'
+Traceback (most recent call last):
+  File "squares.py", line 9, in <module>
+    print(integer**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+6f7f374133c5c969ba18f09c1304fadf1877713a is the first bad commit
+commit 6f7f374133c5c969ba18f09c1304fadf1877713a
+Author: Shawn Siefkas <shawn.siefkas@meredith.com>
+Date:   Thu Nov 14 09:23:55 2013 -0600
+
+    Breaking argument type
+
+ squares.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first bad commit
